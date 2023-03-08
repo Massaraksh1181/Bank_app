@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bank_app.Classes;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace Bank_app.Forms
 {
@@ -21,18 +22,36 @@ namespace Bank_app.Forms
             InitializeComponent();
         }
 
-        // фрагмент для перетягивания формы без рамки
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        /* public const int WM_NCLBUTTONDOWN = 0xA1;
+         public const int HT_CAPTION = 0x2;
 
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+         [System.Runtime.InteropServices.DllImport("user32.dll")]
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        public static extern bool ReleaseCapture();
-        //
+         [System.Runtime.InteropServices.DllImport("user32.dll")]
+
+         public static extern bool ReleaseCapture();
+
+         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
+         {
+             if (e.Button == MouseButtons.Left)
+             {
+                 ReleaseCapture();
+                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+             }
+         }*/
+
+        protected override void WndProc(ref Message message)// претаскивание окна из любого места
+        {
+            if (message.Msg == 0x201)
+            {
+                base.Capture = false;
+                message = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            }
+            base.WndProc(ref message);
+        }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -114,14 +133,9 @@ namespace Bank_app.Forms
             Application.Exit();
         }
 
-        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
+       
+
+
     }
 
 }
