@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bank_app.Classes;
 using System.Data.SqlClient;
-using System.Runtime.InteropServices;
 
 namespace Bank_app.Forms
 {
@@ -132,9 +131,6 @@ namespace Bank_app.Forms
         {
             Application.Exit();
         }
-
-       
-
 
     }
 
