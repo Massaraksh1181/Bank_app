@@ -16,5 +16,16 @@ namespace Bank_app.Forms
         {
             InitializeComponent();
         }
+
+        private void addCard_Click(object sender, EventArgs e)
+        {
+            AddBankCard addBankCard = new AddBankCard();
+            addBankCard.ShowDialog();
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

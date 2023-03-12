@@ -231,6 +231,7 @@ namespace Bank_app.Forms
             this.ShowPasswordCheckBox.TabIndex = 22;
             this.ShowPasswordCheckBox.Text = "Показать пароль";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged_1);
             // 
             // RegistrationForm
             // 

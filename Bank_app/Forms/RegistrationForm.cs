@@ -85,7 +85,7 @@ namespace Bank_app.Forms
                 return;
             }
 
-            if (!Regex.IsMatch(PhoneNumberTextBox.Text, "^[+][7][0-9]{12}$"))
+            if (!Regex.IsMatch(PhoneNumberTextBox.Text, "^[+][7][0-9]{10}$"))
             {
                 MessageBox.Show("Пожалуйста, введите номер телефона", caption, btn, ico);
                 PhoneNumberTextBox.Select();
@@ -151,21 +151,23 @@ namespace Bank_app.Forms
             clearControls();
         }
 
-        private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ShowPasswordCheckBox_CheckedChanged_1(object sender, EventArgs e)
         {
             if (ShowPasswordCheckBox.Checked == true)
             {
                 PasswordTextBox.UseSystemPasswordChar = false;
+                ConfirmPasswordTextBox.UseSystemPasswordChar = false;
             }
             else
             {
                 PasswordTextBox.UseSystemPasswordChar = true;
+                ConfirmPasswordTextBox.UseSystemPasswordChar = true;
             }
-        }
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

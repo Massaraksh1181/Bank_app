@@ -9,3 +9,5 @@ C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.exe
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.pdb
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.LoginForm.resources
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.RegistrationForm.resources
+C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.AddBankCard.resources
+C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.MainForm.resources
