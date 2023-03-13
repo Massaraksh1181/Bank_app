@@ -99,6 +99,7 @@ namespace Bank_app.Forms
                 pictureBoxMastercard.Visible = true;
                 pictureBoxVisa.Visible = false;
             }
+            dataBase.closeConnection();///////////////////////////////////////////////////////////////////
         }
 
         private void label_cardCvv_Click(object sender, EventArgs e)

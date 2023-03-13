@@ -44,7 +44,7 @@ namespace Bank_app.Forms
             DateTime dateTime = DateTime.Now;
             var cardDate = dateTime.AddYears(4);
 
-            for (int i=0; i<3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 cvvCode += Convert.ToString(rand.Next(0, 10));
             }
