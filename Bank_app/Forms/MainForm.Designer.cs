@@ -30,27 +30,39 @@ namespace Bank_app.Forms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.CardcomboBox = new System.Windows.Forms.ComboBox();
             this.addCard = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.refreshPictureBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label_cardNumber = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelcardTo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label_cardCvv = new System.Windows.Forms.Label();
+            this.cardsComboBox = new System.Windows.Forms.ComboBox();
+            this.balanceLabel = new System.Windows.Forms.Label();
+            this.currencyLabel = new System.Windows.Forms.Label();
+            this.pictureBoxVisa = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMastercard = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,16 +74,6 @@ namespace Bank_app.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 43);
             this.panel1.TabIndex = 0;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.Location = new System.Drawing.Point(740, 10);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(26, 23);
-            this.CloseButton.TabIndex = 3;
-            this.CloseButton.Text = "X";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // pictureBox1
             // 
@@ -88,6 +90,16 @@ namespace Bank_app.Forms
             this.pictureBox2.Size = new System.Drawing.Size(38, 31);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(740, 10);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(26, 23);
+            this.CloseButton.TabIndex = 3;
+            this.CloseButton.Text = "X";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // CardcomboBox
             // 
@@ -116,74 +128,24 @@ namespace Bank_app.Forms
             this.label1.TabIndex = 3;
             this.label1.Text = "Карты:";
             // 
-            // pictureBox3
+            // refreshPictureBox
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(715, 85);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 39);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.refreshPictureBox.Location = new System.Drawing.Point(730, 61);
+            this.refreshPictureBox.Name = "refreshPictureBox";
+            this.refreshPictureBox.Size = new System.Drawing.Size(48, 39);
+            this.refreshPictureBox.TabIndex = 4;
+            this.refreshPictureBox.TabStop = false;
+            this.refreshPictureBox.Click += new System.EventHandler(this.refreshPictureBox_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(106, 179);
+            this.panel2.Location = new System.Drawing.Point(110, 374);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 88);
             this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(453, 179);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 72);
-            this.panel3.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(106, 294);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 72);
-            this.panel4.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(453, 294);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 72);
-            this.panel5.TabIndex = 8;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(106, 407);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 67);
-            this.panel6.TabIndex = 9;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(453, 407);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 67);
-            this.panel7.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Перевод на карту";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(17, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // button2
             // 
@@ -194,18 +156,167 @@ namespace Bank_app.Forms
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(17, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Перевод на карту";
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(457, 374);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 88);
+            this.panel3.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(110, 468);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 72);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(457, 468);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 72);
+            this.panel5.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(110, 546);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 67);
+            this.panel6.TabIndex = 9;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(457, 546);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 67);
+            this.panel7.TabIndex = 10;
+            // 
+            // label_cardNumber
+            // 
+            this.label_cardNumber.AutoSize = true;
+            this.label_cardNumber.Location = new System.Drawing.Point(126, 205);
+            this.label_cardNumber.Name = "label_cardNumber";
+            this.label_cardNumber.Size = new System.Drawing.Size(35, 13);
+            this.label_cardNumber.TabIndex = 11;
+            this.label_cardNumber.Text = "label3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(127, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "label3";
+            // 
+            // labelcardTo
+            // 
+            this.labelcardTo.AutoSize = true;
+            this.labelcardTo.Location = new System.Drawing.Point(130, 280);
+            this.labelcardTo.Name = "labelcardTo";
+            this.labelcardTo.Size = new System.Drawing.Size(63, 13);
+            this.labelcardTo.TabIndex = 13;
+            this.labelcardTo.Text = "labelcardTo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(130, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "slabel6";
+            // 
+            // label_cardCvv
+            // 
+            this.label_cardCvv.AutoSize = true;
+            this.label_cardCvv.Location = new System.Drawing.Point(133, 329);
+            this.label_cardCvv.Name = "label_cardCvv";
+            this.label_cardCvv.Size = new System.Drawing.Size(35, 13);
+            this.label_cardCvv.TabIndex = 15;
+            this.label_cardCvv.Text = "label4";
+            this.label_cardCvv.Click += new System.EventHandler(this.label_cardCvv_Click);
+            // 
+            // cardsComboBox
+            // 
+            this.cardsComboBox.FormattingEnabled = true;
+            this.cardsComboBox.Location = new System.Drawing.Point(379, 205);
+            this.cardsComboBox.Name = "cardsComboBox";
+            this.cardsComboBox.Size = new System.Drawing.Size(121, 21);
+            this.cardsComboBox.TabIndex = 16;
+            // 
+            // balanceLabel
+            // 
+            this.balanceLabel.AutoSize = true;
+            this.balanceLabel.Location = new System.Drawing.Point(275, 280);
+            this.balanceLabel.Name = "balanceLabel";
+            this.balanceLabel.Size = new System.Drawing.Size(35, 13);
+            this.balanceLabel.TabIndex = 17;
+            this.balanceLabel.Text = "label4";
+            // 
+            // currencyLabel
+            // 
+            this.currencyLabel.AutoSize = true;
+            this.currencyLabel.Location = new System.Drawing.Point(364, 280);
+            this.currencyLabel.Name = "currencyLabel";
+            this.currencyLabel.Size = new System.Drawing.Size(35, 13);
+            this.currencyLabel.TabIndex = 18;
+            this.currencyLabel.Text = "label4";
+            // 
+            // pictureBoxVisa
+            // 
+            this.pictureBoxVisa.Location = new System.Drawing.Point(579, 167);
+            this.pictureBoxVisa.Name = "pictureBoxVisa";
+            this.pictureBoxVisa.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxVisa.TabIndex = 19;
+            this.pictureBoxVisa.TabStop = false;
+            // 
+            // pictureBoxMastercard
+            // 
+            this.pictureBoxMastercard.Location = new System.Drawing.Point(579, 241);
+            this.pictureBoxMastercard.Name = "pictureBoxMastercard";
+            this.pictureBoxMastercard.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxMastercard.TabIndex = 20;
+            this.pictureBoxMastercard.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 522);
+            this.ClientSize = new System.Drawing.Size(800, 622);
+            this.Controls.Add(this.pictureBoxMastercard);
+            this.Controls.Add(this.pictureBoxVisa);
+            this.Controls.Add(this.currencyLabel);
+            this.Controls.Add(this.balanceLabel);
+            this.Controls.Add(this.cardsComboBox);
+            this.Controls.Add(this.label_cardCvv);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelcardTo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_cardNumber);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.refreshPictureBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addCard);
             this.Controls.Add(this.CardcomboBox);
@@ -213,12 +324,15 @@ namespace Bank_app.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +347,7 @@ namespace Bank_app.Forms
         private System.Windows.Forms.ComboBox CardcomboBox;
         private System.Windows.Forms.Button addCard;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox refreshPictureBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
@@ -243,5 +357,15 @@ namespace Bank_app.Forms
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label_cardNumber;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelcardTo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_cardCvv;
+        private System.Windows.Forms.ComboBox cardsComboBox;
+        private System.Windows.Forms.Label balanceLabel;
+        private System.Windows.Forms.Label currencyLabel;
+        private System.Windows.Forms.PictureBox pictureBoxVisa;
+        private System.Windows.Forms.PictureBox pictureBoxMastercard;
     }
 }
