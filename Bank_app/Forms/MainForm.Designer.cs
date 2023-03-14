@@ -127,7 +127,7 @@ namespace Bank_app.Forms
             this.refreshPictureBox.Size = new System.Drawing.Size(48, 39);
             this.refreshPictureBox.TabIndex = 4;
             this.refreshPictureBox.TabStop = false;
-            this.refreshPictureBox.Click += new System.EventHandler(this.refreshPictureBox_Click);
+//            this.refreshPictureBox.Click += new System.EventHandler(this.refreshPictureBox_Click);
             // 
             // panel2
             // 
@@ -248,7 +248,7 @@ namespace Bank_app.Forms
             this.label_cardCvv.Size = new System.Drawing.Size(26, 16);
             this.label_cardCvv.TabIndex = 15;
             this.label_cardCvv.Text = "***";
-            this.label_cardCvv.Click += new System.EventHandler(this.label_cardCvv_Click);
+    //        this.label_cardCvv.Click += new System.EventHandler(this.label_cardCvv_Click);
             // 
             // cardsComboBox
             // 
@@ -326,7 +326,7 @@ namespace Bank_app.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+    //        this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
