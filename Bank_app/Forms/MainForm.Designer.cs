@@ -51,11 +51,11 @@ namespace Bank_app.Forms
             this.labelcardTo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label_cardCvv = new System.Windows.Forms.Label();
-            this.cardsComboBox = new System.Windows.Forms.ComboBox();
             this.balanceLabel = new System.Windows.Forms.Label();
             this.currencyLabel = new System.Windows.Forms.Label();
             this.pictureBoxVisa = new System.Windows.Forms.PictureBox();
             this.pictureBoxMastercard = new System.Windows.Forms.PictureBox();
+            this.cardsComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,12 +122,14 @@ namespace Bank_app.Forms
             // 
             // refreshPictureBox
             // 
+            this.refreshPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("refreshPictureBox.Image")));
             this.refreshPictureBox.Location = new System.Drawing.Point(730, 61);
             this.refreshPictureBox.Name = "refreshPictureBox";
-            this.refreshPictureBox.Size = new System.Drawing.Size(48, 39);
+            this.refreshPictureBox.Size = new System.Drawing.Size(48, 44);
+            this.refreshPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.refreshPictureBox.TabIndex = 4;
             this.refreshPictureBox.TabStop = false;
-//            this.refreshPictureBox.Click += new System.EventHandler(this.refreshPictureBox_Click);
+            this.refreshPictureBox.Click += new System.EventHandler(this.refreshPictureBox_Click);
             // 
             // panel2
             // 
@@ -248,15 +250,7 @@ namespace Bank_app.Forms
             this.label_cardCvv.Size = new System.Drawing.Size(26, 16);
             this.label_cardCvv.TabIndex = 15;
             this.label_cardCvv.Text = "***";
-    //        this.label_cardCvv.Click += new System.EventHandler(this.label_cardCvv_Click);
-            // 
-            // cardsComboBox
-            // 
-            this.cardsComboBox.FormattingEnabled = true;
-            this.cardsComboBox.Location = new System.Drawing.Point(278, 111);
-            this.cardsComboBox.Name = "cardsComboBox";
-            this.cardsComboBox.Size = new System.Drawing.Size(121, 21);
-            this.cardsComboBox.TabIndex = 16;
+            this.label_cardCvv.Click += new System.EventHandler(this.label_cardCvv_Click);
             // 
             // balanceLabel
             // 
@@ -298,16 +292,25 @@ namespace Bank_app.Forms
             this.pictureBoxMastercard.TabIndex = 20;
             this.pictureBoxMastercard.TabStop = false;
             // 
+            // cardsComboBox
+            // 
+            this.cardsComboBox.FormattingEnabled = true;
+            this.cardsComboBox.Location = new System.Drawing.Point(303, 108);
+            this.cardsComboBox.Name = "cardsComboBox";
+            this.cardsComboBox.Size = new System.Drawing.Size(121, 21);
+            this.cardsComboBox.TabIndex = 1;
+            this.cardsComboBox.SelectedIndexChanged += new System.EventHandler(this.cardsComboBox_OnSelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 622);
+            this.Controls.Add(this.cardsComboBox);
             this.Controls.Add(this.pictureBoxMastercard);
             this.Controls.Add(this.pictureBoxVisa);
             this.Controls.Add(this.currencyLabel);
             this.Controls.Add(this.balanceLabel);
-            this.Controls.Add(this.cardsComboBox);
             this.Controls.Add(this.label_cardCvv);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelcardTo);
@@ -326,7 +329,7 @@ namespace Bank_app.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
-    //        this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -363,10 +366,10 @@ namespace Bank_app.Forms
         private System.Windows.Forms.Label labelcardTo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label_cardCvv;
-        private System.Windows.Forms.ComboBox cardsComboBox;
         private System.Windows.Forms.Label balanceLabel;
         private System.Windows.Forms.Label currencyLabel;
         private System.Windows.Forms.PictureBox pictureBoxVisa;
         private System.Windows.Forms.PictureBox pictureBoxMastercard;
+        private System.Windows.Forms.ComboBox cardsComboBox;
     }
 }

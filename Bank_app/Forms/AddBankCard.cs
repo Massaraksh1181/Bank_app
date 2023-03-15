@@ -42,7 +42,8 @@ namespace Bank_app.Forms
             var cvvCode = "";
             bool isCardFree = false;
             DateTime dateTime = DateTime.Now;
-            var cardDate = dateTime.AddYears(4);
+            dateTime = dateTime.AddYears(4);
+            string  cardDate = dateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
             for (int i = 0; i < 3; i++)
             {
@@ -84,7 +85,7 @@ namespace Bank_app.Forms
             dataBase.openConnection();
             commandAddNewCard.ExecuteNonQuery();
             dataBase.closeConnection();
-
+            
             MessageBox.Show("Карта успешно создана", "Данные сохранены", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
