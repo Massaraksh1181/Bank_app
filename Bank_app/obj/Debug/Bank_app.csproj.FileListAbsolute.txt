@@ -11,3 +11,5 @@ C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.Logi
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.RegistrationForm.resources
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.AddBankCard.resources
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.MainForm.resources
+C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.SendToForm.resources
+C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.Validation.resources

@@ -21,13 +21,6 @@ namespace Bank_app.Forms
             InitializeComponent();
         }
 
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
         private void addCard_Click(object sender, EventArgs e)
         {
             AddBankCard addBankCard = new AddBankCard();
@@ -143,6 +136,15 @@ namespace Bank_app.Forms
         private void cardsComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             selectCard();
+        }
+
+        private void payBtn_Click(object sender, EventArgs e)
+        {
+            SendToForm sendToForm = new SendToForm();
+            DataStorage.bankCard = CardTextBox.Text;
+            DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
+            cardsComboBox.Text = "";
+            sendToForm.ShowDialog();
         }
     }
 }

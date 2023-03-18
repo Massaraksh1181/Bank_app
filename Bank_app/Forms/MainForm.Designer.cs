@@ -38,8 +38,8 @@ namespace Bank_app.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.refreshPictureBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.payBtn = new System.Windows.Forms.Button();
+            this.CardTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -133,29 +133,30 @@ namespace Bank_app.Forms
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.payBtn);
+            this.panel2.Controls.Add(this.CardTextBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(110, 374);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 88);
             this.panel2.TabIndex = 5;
             // 
-            // button2
+            // payBtn
             // 
-            this.button2.Location = new System.Drawing.Point(17, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = ">";
-            this.button2.UseVisualStyleBackColor = true;
+            this.payBtn.Location = new System.Drawing.Point(17, 53);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(35, 23);
+            this.payBtn.TabIndex = 2;
+            this.payBtn.Text = ">";
+            this.payBtn.UseVisualStyleBackColor = true;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
-            // textBox1
+            // CardTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 1;
+            this.CardTextBox.Location = new System.Drawing.Point(17, 27);
+            this.CardTextBox.Name = "CardTextBox";
+            this.CardTextBox.Size = new System.Drawing.Size(166, 20);
+            this.CardTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -285,7 +286,7 @@ namespace Bank_app.Forms
             // pictureBoxMastercard
             // 
             this.pictureBoxMastercard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMastercard.Image")));
-            this.pictureBoxMastercard.Location = new System.Drawing.Point(470, 167);
+            this.pictureBoxMastercard.Location = new System.Drawing.Point(364, 167);
             this.pictureBoxMastercard.Name = "pictureBoxMastercard";
             this.pictureBoxMastercard.Size = new System.Drawing.Size(100, 50);
             this.pictureBoxMastercard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,8 +354,8 @@ namespace Bank_app.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox refreshPictureBox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button payBtn;
+        private System.Windows.Forms.TextBox CardTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
