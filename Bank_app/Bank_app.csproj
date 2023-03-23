@@ -54,6 +54,30 @@
     <Compile Include="Forms\AddBankCard.Designer.cs">
       <DependentUpon>AddBankCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ChangeEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeEmail.Designer.cs">
+      <DependentUpon>ChangeEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePhoneNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePhoneNumber.Designer.cs">
+      <DependentUpon>ChangePhoneNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +102,12 @@
     <Compile Include="Forms\SendToForm.Designer.cs">
       <DependentUpon>SendToForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Validation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +118,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddBankCard.resx">
       <DependentUpon>AddBankCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangeEmail.resx">
+      <DependentUpon>ChangeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePhoneNumber.resx">
+      <DependentUpon>ChangePhoneNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -100,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SendToForm.resx">
       <DependentUpon>SendToForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Validation.resx">
       <DependentUpon>Validation.cs</DependentUpon>

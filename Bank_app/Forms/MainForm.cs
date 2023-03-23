@@ -146,5 +146,17 @@ namespace Bank_app.Forms
             cardsComboBox.Text = "";
             sendToForm.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            UserForm userform = new UserForm();
+            userform.ShowDialog();
+        }
+
+        private void pictureBoxHistory_Click(object sender, EventArgs e)
+        {
+            History history = new History();
+            history.Show();
+        }
     }
 }

@@ -31,7 +31,6 @@ namespace Bank_app.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.Button();
             this.addCard = new System.Windows.Forms.Button();
@@ -56,44 +55,40 @@ namespace Bank_app.Forms
             this.pictureBoxVisa = new System.Windows.Forms.PictureBox();
             this.pictureBoxMastercard = new System.Windows.Forms.PictureBox();
             this.cardsComboBox = new System.Windows.Forms.ComboBox();
+            this.pictureBoxHistory = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBoxHistory);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.CloseButton);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(5, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 43);
+            this.panel1.Size = new System.Drawing.Size(783, 56);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(57, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(740, 10);
+            this.CloseButton.Location = new System.Drawing.Point(740, 15);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(26, 23);
             this.CloseButton.TabIndex = 3;
@@ -123,7 +118,7 @@ namespace Bank_app.Forms
             // refreshPictureBox
             // 
             this.refreshPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("refreshPictureBox.Image")));
-            this.refreshPictureBox.Location = new System.Drawing.Point(730, 61);
+            this.refreshPictureBox.Location = new System.Drawing.Point(740, 74);
             this.refreshPictureBox.Name = "refreshPictureBox";
             this.refreshPictureBox.Size = new System.Drawing.Size(48, 44);
             this.refreshPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,6 +297,17 @@ namespace Bank_app.Forms
             this.cardsComboBox.TabIndex = 1;
             this.cardsComboBox.SelectedIndexChanged += new System.EventHandler(this.cardsComboBox_OnSelectedIndexChanged);
             // 
+            // pictureBoxHistory
+            // 
+            this.pictureBoxHistory.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHistory.Image")));
+            this.pictureBoxHistory.Location = new System.Drawing.Point(64, 7);
+            this.pictureBoxHistory.Name = "pictureBoxHistory";
+            this.pictureBoxHistory.Size = new System.Drawing.Size(50, 46);
+            this.pictureBoxHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxHistory.TabIndex = 7;
+            this.pictureBoxHistory.TabStop = false;
+            this.pictureBoxHistory.Click += new System.EventHandler(this.pictureBoxHistory_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,13 +338,13 @@ namespace Bank_app.Forms
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +353,6 @@ namespace Bank_app.Forms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button addCard;
@@ -372,5 +377,6 @@ namespace Bank_app.Forms
         private System.Windows.Forms.PictureBox pictureBoxVisa;
         private System.Windows.Forms.PictureBox pictureBoxMastercard;
         private System.Windows.Forms.ComboBox cardsComboBox;
+        private System.Windows.Forms.PictureBox pictureBoxHistory;
     }
 }

@@ -132,7 +132,8 @@ namespace Bank_app.Forms
 
                 if (DataStorage.attemps>0)
                 {
-                    DateTime transactionDate = DateTime.Now;
+                    DateTime transactionDateDate = DateTime.Now;
+                    string transactionDate = transactionDateDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
                     var transactionNumber = "p";
                     for (int i=0;i<10;i++)
                     {
@@ -172,14 +173,14 @@ namespace Bank_app.Forms
                         queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum}' where bank_card_number = '{destinationCard}'";
                     }
 
-                    //var queryTransaction3 = $"";
+                    var queryTransaction3 = $"insert into transactions (transaction_type, transaction_destination, transaction_date, transaction_number, transaction_value, id_bank_card) values ('Перевод', '{destinationCard}', '{transactionDate}','{transactionNumber}','{sum}', (select id_bank_card from bank_card where bank_card_number = '{cardNumber}'))";
                     var command1 = new SqlCommand(queryTransaction1, database.getConnection());
                     var command2 = new SqlCommand(queryTransaction2, database.getConnection());
-                    //var command3 = new SqlCommand(queryTransaction3, database.getConnection());
+                    var command3 = new SqlCommand(queryTransaction3, database.getConnection());
                     database.openConnection();
                     command1.ExecuteNonQuery();
                     command2.ExecuteNonQuery();
-                    //command3.ExecuteNonQuery();
+                    command3.ExecuteNonQuery();
                     database.closeConnection();
 
                     Close();
