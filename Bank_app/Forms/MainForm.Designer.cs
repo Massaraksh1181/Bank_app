@@ -31,6 +31,7 @@ namespace Bank_app.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxHistory = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.Button();
             this.addCard = new System.Windows.Forms.Button();
@@ -41,6 +42,10 @@ namespace Bank_app.Forms
             this.CardTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -55,14 +60,17 @@ namespace Bank_app.Forms
             this.pictureBoxVisa = new System.Windows.Forms.PictureBox();
             this.pictureBoxMastercard = new System.Windows.Forms.PictureBox();
             this.cardsComboBox = new System.Windows.Forms.ComboBox();
-            this.pictureBoxHistory = new System.Windows.Forms.PictureBox();
+            this.buttonCommunal = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +82,17 @@ namespace Bank_app.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(783, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBoxHistory
+            // 
+            this.pictureBoxHistory.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHistory.Image")));
+            this.pictureBoxHistory.Location = new System.Drawing.Point(64, 7);
+            this.pictureBoxHistory.Name = "pictureBoxHistory";
+            this.pictureBoxHistory.Size = new System.Drawing.Size(50, 46);
+            this.pictureBoxHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxHistory.TabIndex = 7;
+            this.pictureBoxHistory.TabStop = false;
+            this.pictureBoxHistory.Click += new System.EventHandler(this.pictureBoxHistory_Click);
             // 
             // pictureBox2
             // 
@@ -164,13 +183,54 @@ namespace Bank_app.Forms
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(457, 374);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 88);
             this.panel3.TabIndex = 6;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "+7";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = ">";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(38, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Пополнение мобильного";
+            // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.buttonCommunal);
             this.panel4.Location = new System.Drawing.Point(110, 468);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 72);
@@ -297,16 +357,24 @@ namespace Bank_app.Forms
             this.cardsComboBox.TabIndex = 1;
             this.cardsComboBox.SelectedIndexChanged += new System.EventHandler(this.cardsComboBox_OnSelectedIndexChanged);
             // 
-            // pictureBoxHistory
+            // buttonCommunal
             // 
-            this.pictureBoxHistory.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHistory.Image")));
-            this.pictureBoxHistory.Location = new System.Drawing.Point(64, 7);
-            this.pictureBoxHistory.Name = "pictureBoxHistory";
-            this.pictureBoxHistory.Size = new System.Drawing.Size(50, 46);
-            this.pictureBoxHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxHistory.TabIndex = 7;
-            this.pictureBoxHistory.TabStop = false;
-            this.pictureBoxHistory.Click += new System.EventHandler(this.pictureBoxHistory_Click);
+            this.buttonCommunal.Location = new System.Drawing.Point(17, 46);
+            this.buttonCommunal.Name = "buttonCommunal";
+            this.buttonCommunal.Size = new System.Drawing.Size(35, 23);
+            this.buttonCommunal.TabIndex = 3;
+            this.buttonCommunal.Text = ">";
+            this.buttonCommunal.UseVisualStyleBackColor = true;
+            this.buttonCommunal.Click += new System.EventHandler(this.buttonCommunal_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Коммунальные платежи";
             // 
             // MainForm
             // 
@@ -338,13 +406,17 @@ namespace Bank_app.Forms
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,5 +450,11 @@ namespace Bank_app.Forms
         private System.Windows.Forms.PictureBox pictureBoxMastercard;
         private System.Windows.Forms.ComboBox cardsComboBox;
         private System.Windows.Forms.PictureBox pictureBoxHistory;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonCommunal;
     }
 }

@@ -158,5 +158,21 @@ namespace Bank_app.Forms
             History history = new History();
             history.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PhoneForm phoneForm = new PhoneForm();
+            DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
+            DataStorage.phoneNumber = textBox1.Text;
+            textBox1.Text = "";
+            phoneForm.Show();
+        }
+
+        private void buttonCommunal_Click(object sender, EventArgs e)
+        {
+            CommunalPayments communalPayments = new CommunalPayments();
+            DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
+            communalPayments.Show();
+        }
     }
 }
