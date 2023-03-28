@@ -84,6 +84,12 @@
     <Compile Include="Forms\History.Designer.cs">
       <DependentUpon>History.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InternetAndTvPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InternetAndTvPayments.Designer.cs">
+      <DependentUpon>InternetAndTvPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\History.resx">
       <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InternetAndTvPayments.resx">
+      <DependentUpon>InternetAndTvPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -47,6 +47,8 @@ namespace Bank_app.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonCommunal = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -60,8 +62,8 @@ namespace Bank_app.Forms
             this.pictureBoxVisa = new System.Windows.Forms.PictureBox();
             this.pictureBoxMastercard = new System.Windows.Forms.PictureBox();
             this.cardsComboBox = new System.Windows.Forms.ComboBox();
-            this.buttonCommunal = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,6 +71,7 @@ namespace Bank_app.Forms
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).BeginInit();
             this.SuspendLayout();
@@ -236,8 +239,29 @@ namespace Bank_app.Forms
             this.panel4.Size = new System.Drawing.Size(200, 72);
             this.panel4.TabIndex = 7;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Коммунальные платежи";
+            // 
+            // buttonCommunal
+            // 
+            this.buttonCommunal.Location = new System.Drawing.Point(17, 46);
+            this.buttonCommunal.Name = "buttonCommunal";
+            this.buttonCommunal.Size = new System.Drawing.Size(35, 23);
+            this.buttonCommunal.TabIndex = 3;
+            this.buttonCommunal.Text = ">";
+            this.buttonCommunal.UseVisualStyleBackColor = true;
+            this.buttonCommunal.Click += new System.EventHandler(this.buttonCommunal_Click);
+            // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.button2);
             this.panel5.Location = new System.Drawing.Point(457, 468);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 72);
@@ -357,24 +381,24 @@ namespace Bank_app.Forms
             this.cardsComboBox.TabIndex = 1;
             this.cardsComboBox.SelectedIndexChanged += new System.EventHandler(this.cardsComboBox_OnSelectedIndexChanged);
             // 
-            // buttonCommunal
+            // label8
             // 
-            this.buttonCommunal.Location = new System.Drawing.Point(17, 46);
-            this.buttonCommunal.Name = "buttonCommunal";
-            this.buttonCommunal.Size = new System.Drawing.Size(35, 23);
-            this.buttonCommunal.TabIndex = 3;
-            this.buttonCommunal.Text = ">";
-            this.buttonCommunal.UseVisualStyleBackColor = true;
-            this.buttonCommunal.Click += new System.EventHandler(this.buttonCommunal_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Интернет и ТВ";
             // 
-            // label7
+            // button2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Коммунальные платежи";
+            this.button2.Location = new System.Drawing.Point(19, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MainForm
             // 
@@ -415,6 +439,8 @@ namespace Bank_app.Forms
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).EndInit();
             this.ResumeLayout(false);
@@ -456,5 +482,7 @@ namespace Bank_app.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonCommunal;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
     }
 }

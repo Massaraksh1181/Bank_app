@@ -13,35 +13,36 @@ using System.Data.SqlClient;
 
 namespace Bank_app.Forms
 {
-    public partial class CommunalPayments : Form
+    public partial class InternetAndTvPayments : Form
     {
         DataBaseConnection dataBase = new DataBaseConnection();
         Random rand = new Random();
-        DataTable operators = new DataTable();
-        Validation validation = new Validation();
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable table = new DataTable();
 
-        public CommunalPayments()
+        public InternetAndTvPayments()
         {
             InitializeComponent();
+        }
+
+        private void InternetAndTvPayments_Load(object sender, EventArgs e)
+        {
+            label_cardNumber.Text = DataStorage.cardNumber;
+
+            var queryChooseOperator = $"select id_service, serviceName from clientServices where serviceType = 'Internet'";
+            SqlDataAdapter commandChooseOperator = new SqlDataAdapter(queryChooseOperator, dataBase.getConnection());
+            dataBase.openConnection();
+            DataTable operators = new DataTable();
+            commandChooseOperator.Fill(operators);
+            comboBoxInternetAndTvPayments.DataSource = operators;
+            comboBoxInternetAndTvPayments.ValueMember = "id_service";
+            comboBoxInternetAndTvPayments.DisplayMember = "serviceName";
+            dataBase.closeConnection();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void CommunalPayments_Load(object sender, EventArgs e)
-        {   
-            label_cardNumber.Text = DataStorage.cardNumber;
-
-            var queryChooseOperator = $"select id_service, serviceName from clientServices where serviceType = 'communal'";
-            SqlDataAdapter commandChooseOperator = new SqlDataAdapter(queryChooseOperator, dataBase.getConnection());
-            dataBase.openConnection();
-            commandChooseOperator.Fill(operators);
-            comboBoxCommunalPayment.DataSource = operators;
-            comboBoxCommunalPayment.ValueMember = "id_service";
-            comboBoxCommunalPayment.DisplayMember = "serviceName";
-            dataBase.closeConnection();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace Bank_app.Forms
             if (error == false)
             {
                 DataStorage.bankCard = label_cardNumber.Text;
+                Validation validation = new Validation();
                 validation.ShowDialog();
 
                 if (DataStorage.attemps > 0)
@@ -123,9 +125,9 @@ namespace Bank_app.Forms
                         transactionNumber += Convert.ToString(rand.Next(0, 10));
                     }
                     var queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance -'{sum}' where bank_card_number = '{cardNumber}'";
-                    var queryTransaction2 = $"insert into transactions(transaction_type, transaction_destination, transaction_date, transaction_number, transaction_value, id_bank_card) values ('Оплата коммунальных услуг', '{comboBoxCommunalPayment.GetItemText(comboBoxCommunalPayment.SelectedItem)}','{transactionDate}','{transactionNumber}', '{sum}', (select id_bank_card from bank_card where bank_card_number = '{cardNumber}'))";
-                    var queryTransaction3 = $"update clientServices set serviceBalance = serviceBalance +'{sum}' where serviceName = '{comboBoxCommunalPayment.GetItemText(comboBoxCommunalPayment.SelectedItem)}' and serviceType = 'communal'";
-                    var queryTransaction4 = $"insert into clientPersonalAccount(personal_account, id_service, id_client) values ('{textBoxPersonalAccount.Text}', (select id_service from clientServices where serviceName = '{comboBoxCommunalPayment.GetItemText(comboBoxCommunalPayment.SelectedItem)}'), '{DataStorage.idClient}')";
+                    var queryTransaction2 = $"insert into transactions(transaction_type, transaction_destination, transaction_date, transaction_number, transaction_value, id_bank_card) values ('Оплата интернета и телевидения', '{comboBoxInternetAndTvPayments.GetItemText(comboBoxInternetAndTvPayments.SelectedItem)}','{transactionDate}','{transactionNumber}', '{sum}', (select id_bank_card from bank_card where bank_card_number = '{cardNumber}'))";
+                    var queryTransaction3 = $"update clientServices set serviceBalance = serviceBalance +'{sum}' where serviceName = '{comboBoxInternetAndTvPayments.GetItemText(comboBoxInternetAndTvPayments.SelectedItem)}' and serviceType = 'Internet'";
+                    var queryTransaction4 = $"insert into clientPersonalAccount(personal_account, id_service, id_client) values ('{textBoxPersonalAccount.Text}', (select id_service from clientServices where serviceName = '{comboBoxInternetAndTvPayments.GetItemText(comboBoxInternetAndTvPayments.SelectedItem)}' and serviceType = 'Internet'), '{DataStorage.idClient}')";
 
                     var command1 = new SqlCommand(queryTransaction1, dataBase.getConnection());
                     var command2 = new SqlCommand(queryTransaction2, dataBase.getConnection());
@@ -144,6 +146,6 @@ namespace Bank_app.Forms
                     Close();
                 }
             }
-            }
+        }
     }
 }

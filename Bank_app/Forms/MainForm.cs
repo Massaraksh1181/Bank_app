@@ -174,5 +174,12 @@ namespace Bank_app.Forms
             DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
             communalPayments.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InternetAndTvPayments internetAndTvPayments = new InternetAndTvPayments();
+            DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
+            internetAndTvPayments.Show();
+        }
     }
 }
