@@ -21,3 +21,4 @@ C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.Hist
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.PhoneForm.resources
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.CommunalPayments.resources
 C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.InternetAndTvPayments.resources
+C:\Users\Massaracsh\source\repos\Bank_app\Bank_app\obj\Debug\Bank_app.Forms.Credit.resources

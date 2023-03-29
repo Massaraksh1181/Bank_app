@@ -50,7 +50,8 @@ namespace Bank_app.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.buttonCommunal = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label_cardNumber = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,8 +63,8 @@ namespace Bank_app.Forms
             this.pictureBoxVisa = new System.Windows.Forms.PictureBox();
             this.pictureBoxMastercard = new System.Windows.Forms.PictureBox();
             this.cardsComboBox = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,6 +73,7 @@ namespace Bank_app.Forms
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).BeginInit();
             this.SuspendLayout();
@@ -267,16 +269,30 @@ namespace Bank_app.Forms
             this.panel5.Size = new System.Drawing.Size(200, 72);
             this.panel5.TabIndex = 8;
             // 
-            // panel6
+            // label8
             // 
-            this.panel6.Location = new System.Drawing.Point(110, 546);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 67);
-            this.panel6.TabIndex = 9;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Интернет и ТВ";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(19, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(457, 546);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.button3);
+            this.panel7.Location = new System.Drawing.Point(110, 547);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 67);
             this.panel7.TabIndex = 10;
@@ -381,24 +397,24 @@ namespace Bank_app.Forms
             this.cardsComboBox.TabIndex = 1;
             this.cardsComboBox.SelectedIndexChanged += new System.EventHandler(this.cardsComboBox_OnSelectedIndexChanged);
             // 
-            // label8
+            // label9
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Интернет и ТВ";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Кредит";
             // 
-            // button2
+            // button3
             // 
-            this.button2.Location = new System.Drawing.Point(19, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = ">";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Location = new System.Drawing.Point(17, 40);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = ">";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MainForm
             // 
@@ -416,7 +432,6 @@ namespace Bank_app.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_cardNumber);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -441,6 +456,8 @@ namespace Bank_app.Forms
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMastercard)).EndInit();
             this.ResumeLayout(false);
@@ -463,7 +480,6 @@ namespace Bank_app.Forms
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label_cardNumber;
         private System.Windows.Forms.Label label3;
@@ -484,5 +500,7 @@ namespace Bank_app.Forms
         private System.Windows.Forms.Button buttonCommunal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button3;
     }
 }

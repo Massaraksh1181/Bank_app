@@ -181,5 +181,28 @@ namespace Bank_app.Forms
             DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
             internetAndTvPayments.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataStorage.cardNumber = cardsComboBox.GetItemText(cardsComboBox.SelectedItem);
+            var cardCurrency = "";
+            var queryCheckCurrency = $"select bank_card_currency from bank_card where bank_card_number ='{DataStorage.cardNumber}'";
+            dataBase.openConnection();
+            SqlCommand commandCheckCurency = new SqlCommand(queryCheckCurrency, dataBase.getConnection());
+            SqlDataReader reader = commandCheckCurency.ExecuteReader();
+            while (reader.Read())
+            {
+                cardCurrency = reader[0].ToString();
+            }
+            reader.Close();
+            dataBase.closeConnection();
+            if (cardCurrency == "RUB")
+            {
+                Credit credit = new Credit();
+                credit.Show();
+            }
+            else
+                MessageBox.Show("Операции могут проиводиться только в рублях","Отказ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

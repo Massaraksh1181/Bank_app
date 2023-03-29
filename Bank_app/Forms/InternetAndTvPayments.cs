@@ -143,6 +143,7 @@ namespace Bank_app.Forms
 
                     dataBase.closeConnection();
 
+
                     Close();
                 }
             }
