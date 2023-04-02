@@ -81,6 +81,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CloseButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangeEmail";
             this.Text = "ChangeEmail";
             this.ResumeLayout(false);

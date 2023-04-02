@@ -19,6 +19,7 @@ namespace Bank_app.Forms
         public LoginForm()
         {
             InitializeComponent();
+            PasswordTextBox.UseSystemPasswordChar = true;
         }
 
 

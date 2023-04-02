@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\DataBaseConnection.cs" />
     <Compile Include="Classes\DataStorage.cs" />
+    <Compile Include="Classes\ShapeMovement.cs" />
     <Compile Include="Forms\AddBankCard.cs">
       <SubType>Form</SubType>
     </Compile>

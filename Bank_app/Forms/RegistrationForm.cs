@@ -20,6 +20,18 @@ namespace Bank_app.Forms
         public RegistrationForm()
         {
             InitializeComponent();
+            PasswordTextBox.UseSystemPasswordChar = true;
+            ConfirmPasswordTextBox.UseSystemPasswordChar = true;
+        }
+
+        protected override void WndProc(ref Message message)// претаскивание окна из любого места
+        {
+            if (message.Msg == 0x201)
+            {
+                base.Capture = false;
+                message = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            }
+            base.WndProc(ref message);
         }
 
         private void SaveButton_Click(object sender, EventArgs e)

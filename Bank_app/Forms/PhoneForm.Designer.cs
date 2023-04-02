@@ -201,6 +201,7 @@ namespace Bank_app.Forms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label_cardNumber);
             this.panel1.Controls.Add(this.TextBoxCardTo);
             this.panel1.Controls.Add(this.TextBoxCvv);
@@ -277,7 +278,7 @@ namespace Bank_app.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 552);
+            this.ClientSize = new System.Drawing.Size(353, 552);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label12);
@@ -296,6 +297,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PhoneForm";
             this.Text = "PhoneForm";
             this.Load += new System.EventHandler(this.PhoneForm_Load);

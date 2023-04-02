@@ -47,7 +47,7 @@ namespace Bank_app.Forms
             // 
             // pinTextbox
             // 
-            this.pinTextbox.Location = new System.Drawing.Point(52, 101);
+            this.pinTextbox.Location = new System.Drawing.Point(40, 78);
             this.pinTextbox.Name = "pinTextbox";
             this.pinTextbox.Size = new System.Drawing.Size(100, 20);
             this.pinTextbox.TabIndex = 6;
@@ -55,7 +55,7 @@ namespace Bank_app.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 66);
+            this.label1.Location = new System.Drawing.Point(40, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 7;
@@ -63,9 +63,9 @@ namespace Bank_app.Forms
             // 
             // SendBtn
             // 
-            this.SendBtn.Location = new System.Drawing.Point(52, 148);
+            this.SendBtn.Location = new System.Drawing.Point(40, 117);
             this.SendBtn.Name = "SendBtn";
-            this.SendBtn.Size = new System.Drawing.Size(75, 23);
+            this.SendBtn.Size = new System.Drawing.Size(100, 31);
             this.SendBtn.TabIndex = 8;
             this.SendBtn.Text = "ОК";
             this.SendBtn.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace Bank_app.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 212);
+            this.ClientSize = new System.Drawing.Size(251, 176);
             this.Controls.Add(this.SendBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pinTextbox);

@@ -140,6 +140,7 @@ namespace Bank_app.Forms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label_cardNumber);
             this.panel1.Controls.Add(this.TextBoxCardTo);
             this.panel1.Controls.Add(this.TextBoxCvv);
@@ -218,6 +219,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.comboBoxInternetAndTvPayments);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InternetAndTvPayments";
             this.Text = "InternetAndYvPayments";
             this.Load += new System.EventHandler(this.InternetAndTvPayments_Load);

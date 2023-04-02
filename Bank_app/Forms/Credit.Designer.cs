@@ -315,7 +315,7 @@ namespace Bank_app.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 432);
+            this.ClientSize = new System.Drawing.Size(528, 432);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -331,6 +331,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Credit";
             this.Text = "Credit";
             this.Load += new System.EventHandler(this.Credit_Load);

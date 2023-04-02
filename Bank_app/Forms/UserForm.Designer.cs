@@ -55,7 +55,7 @@ namespace Bank_app.Forms
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(683, 3);
+            this.CloseButton.Location = new System.Drawing.Point(683, 11);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(25, 24);
             this.CloseButton.TabIndex = 4;
@@ -65,6 +65,7 @@ namespace Bank_app.Forms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.CloseButton);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -84,6 +85,7 @@ namespace Bank_app.Forms
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.labelEmail);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.labelPhone);
@@ -91,9 +93,9 @@ namespace Bank_app.Forms
             this.panel2.Controls.Add(this.labelPIB);
             this.panel2.Controls.Add(this.labelP);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 66);
+            this.panel2.Location = new System.Drawing.Point(12, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 310);
+            this.panel2.Size = new System.Drawing.Size(354, 289);
             this.panel2.TabIndex = 6;
             // 
             // labelEmail
@@ -162,14 +164,15 @@ namespace Bank_app.Forms
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.refreshButton);
             this.panel3.Controls.Add(this.changePasswordButton);
             this.panel3.Controls.Add(this.changeEmailButton);
             this.panel3.Controls.Add(this.changePhonebutton);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(387, 66);
+            this.panel3.Location = new System.Drawing.Point(387, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(343, 310);
+            this.panel3.Size = new System.Drawing.Size(343, 288);
             this.panel3.TabIndex = 7;
             // 
             // refreshButton
@@ -216,7 +219,7 @@ namespace Bank_app.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(18, 16);
+            this.label8.Location = new System.Drawing.Point(18, 22);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 24);
             this.label8.TabIndex = 7;
@@ -230,6 +233,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserForm";
             this.Text = "UserForm";
             this.Load += new System.EventHandler(this.UserForm_Load);

@@ -54,7 +54,7 @@ namespace Bank_app.Forms
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(377, 12);
+            this.CloseButton.Location = new System.Drawing.Point(306, 12);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(26, 23);
             this.CloseButton.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace Bank_app.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 22);
+            this.label1.Location = new System.Drawing.Point(118, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 3;
@@ -128,7 +128,7 @@ namespace Bank_app.Forms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 397);
+            this.label8.Location = new System.Drawing.Point(15, 405);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(148, 13);
             this.label8.TabIndex = 10;
@@ -137,7 +137,7 @@ namespace Bank_app.Forms
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 444);
+            this.label9.Location = new System.Drawing.Point(15, 452);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 13);
             this.label9.TabIndex = 11;
@@ -180,23 +180,23 @@ namespace Bank_app.Forms
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(18, 421);
+            this.EmailTextBox.Location = new System.Drawing.Point(18, 429);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(283, 20);
             this.EmailTextBox.TabIndex = 17;
             // 
             // PhoneNumberTextBox
             // 
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(18, 468);
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(18, 476);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(283, 20);
             this.PhoneNumberTextBox.TabIndex = 18;
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(43, 528);
+            this.SaveButton.Location = new System.Drawing.Point(43, 515);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.Size = new System.Drawing.Size(95, 36);
             this.SaveButton.TabIndex = 19;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -204,9 +204,9 @@ namespace Bank_app.Forms
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(192, 528);
+            this.ClearButton.Location = new System.Drawing.Point(192, 515);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearButton.Size = new System.Drawing.Size(91, 36);
             this.ClearButton.TabIndex = 20;
             this.ClearButton.Text = "Очистить";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@ namespace Bank_app.Forms
             // ShowPasswordCheckBox
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(222, 385);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(195, 387);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(114, 17);
             this.ShowPasswordCheckBox.TabIndex = 22;
@@ -237,7 +237,7 @@ namespace Bank_app.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 576);
+            this.ClientSize = new System.Drawing.Size(349, 576);
             this.Controls.Add(this.ShowPasswordCheckBox);
             this.Controls.Add(this.GenderComboBox);
             this.Controls.Add(this.ClearButton);

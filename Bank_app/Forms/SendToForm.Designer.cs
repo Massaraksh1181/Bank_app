@@ -37,21 +37,21 @@ namespace Bank_app.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TextBoxCardTo = new System.Windows.Forms.TextBox();
+            this.TextBoxCvv = new System.Windows.Forms.TextBox();
+            this.TextBoxCard = new System.Windows.Forms.TextBox();
             this.TextBoxSum = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TextBoxCardDestination = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SendBtn = new System.Windows.Forms.Button();
-            this.TextBoxCard = new System.Windows.Forms.TextBox();
-            this.TextBoxCardDestination = new System.Windows.Forms.TextBox();
-            this.TextBoxCvv = new System.Windows.Forms.TextBox();
-            this.TextBoxCardTo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(403, 12);
+            this.CloseButton.Location = new System.Drawing.Point(304, 12);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(26, 23);
             this.CloseButton.TabIndex = 4;
@@ -62,7 +62,7 @@ namespace Bank_app.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 49);
+            this.label1.Location = new System.Drawing.Point(28, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 5;
@@ -98,7 +98,7 @@ namespace Bank_app.Forms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 281);
+            this.label5.Location = new System.Drawing.Point(28, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 9;
@@ -107,7 +107,7 @@ namespace Bank_app.Forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 382);
+            this.label6.Location = new System.Drawing.Point(22, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 10;
@@ -115,32 +115,62 @@ namespace Bank_app.Forms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.TextBoxCardTo);
             this.panel1.Controls.Add(this.TextBoxCvv);
             this.panel1.Controls.Add(this.TextBoxCard);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(36, 65);
+            this.panel1.Location = new System.Drawing.Point(25, 65);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 148);
+            this.panel1.Size = new System.Drawing.Size(293, 148);
             this.panel1.TabIndex = 11;
+            // 
+            // TextBoxCardTo
+            // 
+            this.TextBoxCardTo.Location = new System.Drawing.Point(16, 108);
+            this.TextBoxCardTo.Name = "TextBoxCardTo";
+            this.TextBoxCardTo.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxCardTo.TabIndex = 11;
+            // 
+            // TextBoxCvv
+            // 
+            this.TextBoxCvv.Location = new System.Drawing.Point(139, 109);
+            this.TextBoxCvv.Name = "TextBoxCvv";
+            this.TextBoxCvv.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxCvv.TabIndex = 10;
+            // 
+            // TextBoxCard
+            // 
+            this.TextBoxCard.Location = new System.Drawing.Point(16, 39);
+            this.TextBoxCard.Name = "TextBoxCard";
+            this.TextBoxCard.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxCard.TabIndex = 9;
             // 
             // TextBoxSum
             // 
-            this.TextBoxSum.Location = new System.Drawing.Point(36, 398);
+            this.TextBoxSum.Location = new System.Drawing.Point(25, 380);
             this.TextBoxSum.Name = "TextBoxSum";
-            this.TextBoxSum.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxSum.Size = new System.Drawing.Size(293, 20);
             this.TextBoxSum.TabIndex = 9;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.TextBoxCardDestination);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(36, 297);
+            this.panel2.Location = new System.Drawing.Point(25, 268);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(293, 65);
             this.panel2.TabIndex = 12;
+            // 
+            // TextBoxCardDestination
+            // 
+            this.TextBoxCardDestination.Location = new System.Drawing.Point(16, 33);
+            this.TextBoxCardDestination.Name = "TextBoxCardDestination";
+            this.TextBoxCardDestination.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxCardDestination.TabIndex = 10;
             // 
             // label7
             // 
@@ -153,47 +183,19 @@ namespace Bank_app.Forms
             // 
             // SendBtn
             // 
-            this.SendBtn.Location = new System.Drawing.Point(36, 443);
+            this.SendBtn.Location = new System.Drawing.Point(25, 424);
             this.SendBtn.Name = "SendBtn";
-            this.SendBtn.Size = new System.Drawing.Size(75, 23);
+            this.SendBtn.Size = new System.Drawing.Size(293, 54);
             this.SendBtn.TabIndex = 13;
             this.SendBtn.Text = "Провести";
             this.SendBtn.UseVisualStyleBackColor = true;
             this.SendBtn.Click += new System.EventHandler(this.SendBtn_Click);
             // 
-            // TextBoxCard
-            // 
-            this.TextBoxCard.Location = new System.Drawing.Point(16, 39);
-            this.TextBoxCard.Name = "TextBoxCard";
-            this.TextBoxCard.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxCard.TabIndex = 9;
-            // 
-            // TextBoxCardDestination
-            // 
-            this.TextBoxCardDestination.Location = new System.Drawing.Point(16, 33);
-            this.TextBoxCardDestination.Name = "TextBoxCardDestination";
-            this.TextBoxCardDestination.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxCardDestination.TabIndex = 10;
-            // 
-            // TextBoxCvv
-            // 
-            this.TextBoxCvv.Location = new System.Drawing.Point(139, 109);
-            this.TextBoxCvv.Name = "TextBoxCvv";
-            this.TextBoxCvv.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxCvv.TabIndex = 10;
-            // 
-            // TextBoxCardTo
-            // 
-            this.TextBoxCardTo.Location = new System.Drawing.Point(16, 108);
-            this.TextBoxCardTo.Name = "TextBoxCardTo";
-            this.TextBoxCardTo.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxCardTo.TabIndex = 11;
-            // 
             // SendToForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 490);
+            this.ClientSize = new System.Drawing.Size(350, 506);
             this.Controls.Add(this.SendBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TextBoxSum);

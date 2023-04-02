@@ -23,9 +23,22 @@ namespace Bank_app.Forms
         public SendToForm()
         {
             InitializeComponent();
+            System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
+            customCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
         }
 
-       // SqlParameter parameter = new SqlParameter("@Money", SqlDbType.Money);
+        protected override void WndProc(ref Message message)// претаскивание окна из любого места
+        {
+            if (message.Msg == 0x201)
+            {
+                base.Capture = false;
+                message = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            }
+            base.WndProc(ref message);
+        }
+
+        // SqlParameter parameter = new SqlParameter("@Money", SqlDbType.Money);
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -40,8 +53,8 @@ namespace Bank_app.Forms
 
         private void SendBtn_Click(object sender, EventArgs e)
         {
-            decimal dollar = 70.5m;
-            decimal euro = 100.2m;
+            decimal dollar = 77.32m;
+            decimal euro = 84.11m;
 
             var cardNumber = TextBoxCard.Text;
             var cardCVV = TextBoxCvv.Text;
@@ -145,31 +158,31 @@ namespace Bank_app.Forms
                     if (cardCurrency == "RUB" && cardCurrency2 == "USD")
                     {
                         queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{Math.Round(sum / dollar, 0)}' where bank_card_number = '{destinationCard}'";
+                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum / dollar}' where bank_card_number = '{destinationCard}'";
                     }
                     else if (cardCurrency == "RUB" && cardCurrency2 == "EUR")
                     {
                         queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{Math.Round(sum / euro, 0)}' where bank_card_number = '{destinationCard}'";
+                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum / euro}' where bank_card_number = '{destinationCard}'";
                     }
                     else if (cardCurrency == "USD" && cardCurrency2 == "RUB")
                     {
                         queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{Math.Round(sum * dollar,0)}' where bank_card_number = '{destinationCard}'";
+                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum * dollar}' where bank_card_number = '{destinationCard}'";
                     }
                     else if (cardCurrency == "USD" && cardCurrency2 == "EUR")
                     {
                         queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{Math.Round(sum * dollar/euro, 0)}' where bank_card_number = '{destinationCard}'";
+                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum * dollar/euro}' where bank_card_number = '{destinationCard}'";
                     }
                     else if (cardCurrency == "EUR" && cardCurrency2 == "RUB")
                     {
                         queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{Math.Round(sum * euro,0)}' where bank_card_number = '{destinationCard}'";
+                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum * euro}' where bank_card_number = '{destinationCard}'";
                     }
                     else
                     {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{Math.Round(sum * 1.03m, 0)}' where bank_card_number = '{cardNumber}'";
+                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum * 1.03m}' where bank_card_number = '{cardNumber}'";
                         queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum}' where bank_card_number = '{destinationCard}'";
                     }
 

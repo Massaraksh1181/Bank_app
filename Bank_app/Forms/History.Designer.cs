@@ -31,18 +31,19 @@ namespace Bank_app.Forms
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.CloseButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Location = new System.Drawing.Point(36, 82);
             this.panel1.Name = "panel1";
@@ -64,26 +65,6 @@ namespace Bank_app.Forms
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.Location = new System.Drawing.Point(673, 12);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(26, 23);
-            this.CloseButton.TabIndex = 4;
-            this.CloseButton.Text = "X";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(36, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "История транзакций";
             // 
             // columnHeader1
             // 
@@ -110,6 +91,26 @@ namespace Bank_app.Forms
             this.columnHeader5.Text = "Сумма";
             this.columnHeader5.Width = 130;
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(673, 12);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(26, 23);
+            this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "X";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(36, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "История транзакций";
+            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +119,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "History";
             this.Text = "History";
             this.Load += new System.EventHandler(this.History_Load);

@@ -51,6 +51,7 @@ namespace Bank_app.Forms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label_cardNumber);
             this.panel1.Controls.Add(this.TextBoxCardTo);
             this.panel1.Controls.Add(this.TextBoxCvv);
@@ -176,7 +177,7 @@ namespace Bank_app.Forms
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(8, 209);
+            this.label12.Location = new System.Drawing.Point(15, 209);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 20);
             this.label12.TabIndex = 30;
@@ -218,6 +219,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.comboBoxCommunalPayment);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CommunalPayments";
             this.Text = "CommunalPayments";
             this.Load += new System.EventHandler(this.CommunalPayments_Load);

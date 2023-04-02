@@ -81,6 +81,7 @@ namespace Bank_app.Forms
             this.Controls.Add(this.NumberTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CloseButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePhoneNumber";
             this.Text = "ChangePhoneNumber";
             this.ResumeLayout(false);
