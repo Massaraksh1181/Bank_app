@@ -38,8 +38,7 @@ namespace Bank_app.Forms
             this.currencyComboBox = new System.Windows.Forms.ComboBox();
             this.paymentSystemComboBox = new System.Windows.Forms.ComboBox();
             this.addCardButton = new System.Windows.Forms.Button();
-            this.numericUpDownPin = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPin)).BeginInit();
+            this.PINcodeTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CloseButton
@@ -132,19 +131,19 @@ namespace Bank_app.Forms
             this.addCardButton.UseVisualStyleBackColor = true;
             this.addCardButton.Click += new System.EventHandler(this.addCardButton_Click);
             // 
-            // numericUpDownPin
+            // PINcodeTextBox
             // 
-            this.numericUpDownPin.Location = new System.Drawing.Point(33, 355);
-            this.numericUpDownPin.Name = "numericUpDownPin";
-            this.numericUpDownPin.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownPin.TabIndex = 13;
+            this.PINcodeTextBox.Location = new System.Drawing.Point(32, 358);
+            this.PINcodeTextBox.Name = "PINcodeTextBox";
+            this.PINcodeTextBox.Size = new System.Drawing.Size(57, 20);
+            this.PINcodeTextBox.TabIndex = 14;
             // 
             // AddBankCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 450);
-            this.Controls.Add(this.numericUpDownPin);
+            this.Controls.Add(this.PINcodeTextBox);
             this.Controls.Add(this.addCardButton);
             this.Controls.Add(this.paymentSystemComboBox);
             this.Controls.Add(this.currencyComboBox);
@@ -157,7 +156,6 @@ namespace Bank_app.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddBankCard";
             this.Text = "AddBankCard";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +172,6 @@ namespace Bank_app.Forms
         private System.Windows.Forms.ComboBox currencyComboBox;
         private System.Windows.Forms.ComboBox paymentSystemComboBox;
         private System.Windows.Forms.Button addCardButton;
-        private System.Windows.Forms.NumericUpDown numericUpDownPin;
+        private System.Windows.Forms.TextBox PINcodeTextBox;
     }
 }

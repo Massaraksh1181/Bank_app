@@ -84,6 +84,7 @@ namespace Bank_app.Forms
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(253, 20);
             this.PhoneNumberTextBox.TabIndex = 4;
+            this.PhoneNumberTextBox.Text = "+79040939084";
             // 
             // PasswordTextBox
             // 
@@ -91,6 +92,7 @@ namespace Bank_app.Forms
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(253, 20);
             this.PasswordTextBox.TabIndex = 5;
+            this.PasswordTextBox.Text = "Emperor1181#";
             // 
             // ShowPasswordCheckBox
             // 

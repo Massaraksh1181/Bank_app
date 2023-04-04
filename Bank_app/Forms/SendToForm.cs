@@ -16,6 +16,7 @@ namespace Bank_app.Forms
     public partial class SendToForm : Form
     {
         DataBaseConnection database = new DataBaseConnection();
+        CurrencyAPI currencyAPI = new CurrencyAPI();
         Random rand = new Random();
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -53,23 +54,18 @@ namespace Bank_app.Forms
 
         private void SendBtn_Click(object sender, EventArgs e)
         {
-            decimal dollar = 77.32m;
-            decimal euro = 84.11m;
 
             var cardNumber = TextBoxCard.Text;
             var cardCVV = TextBoxCvv.Text;
             var cardDate = TextBoxCardTo.Text;
             var destinationCard = TextBoxCardDestination.Text;
             decimal sum = Convert.ToDecimal(TextBoxSum.Text);
-            //string sum = TextBoxSum.Text;//
             var cardCurrency = "";
             var cardCurrency2 = ""; 
             var cardCVVCheck = "";
             var cardDateCheck = "";
             decimal cardBalanceCheck = 0;
             bool error = false;
-
-           // SqlMoney(sum);////////////
 
             var queryCheckCard = $"select bank_card_cvv_code, CONCAT(FORMAT(bank_card_date, '%M'), '/', FORMAT (bank_card_date,'%y'))," +
                 $" bank_card_balance, bank_card_currency from bank_card where bank_card_number = '{cardNumber}'";
@@ -154,38 +150,10 @@ namespace Bank_app.Forms
                     }
                     var queryTransaction1 = $"";
                     var queryTransaction2 = $"";
-
-                    if (cardCurrency == "RUB" && cardCurrency2 == "USD")
-                    {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum / dollar}' where bank_card_number = '{destinationCard}'";
-                    }
-                    else if (cardCurrency == "RUB" && cardCurrency2 == "EUR")
-                    {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum / euro}' where bank_card_number = '{destinationCard}'";
-                    }
-                    else if (cardCurrency == "USD" && cardCurrency2 == "RUB")
-                    {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum * dollar}' where bank_card_number = '{destinationCard}'";
-                    }
-                    else if (cardCurrency == "USD" && cardCurrency2 == "EUR")
-                    {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum * dollar/euro}' where bank_card_number = '{destinationCard}'";
-                    }
-                    else if (cardCurrency == "EUR" && cardCurrency2 == "RUB")
-                    {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum * euro}' where bank_card_number = '{destinationCard}'";
-                    }
-                    else
-                    {
-                        queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum * 1.03m}' where bank_card_number = '{cardNumber}'";
-                        queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum}' where bank_card_number = '{destinationCard}'";
-                    }
-
+ 
+                    queryTransaction1 = $"update bank_card set bank_card_balance = bank_card_balance - '{sum}' where bank_card_number = '{cardNumber}'";
+                    queryTransaction2 = $"update bank_card set bank_card_balance = bank_card_balance + '{sum*currencyAPI.getCurrency(cardCurrency, cardCurrency2)}' where bank_card_number = '{destinationCard}'";
+ 
                     var queryTransaction3 = $"insert into transactions (transaction_type, transaction_destination, transaction_date, transaction_number, transaction_value, id_bank_card) values ('Перевод', '{destinationCard}', '{transactionDate}','{transactionNumber}','{sum}', (select id_bank_card from bank_card where bank_card_number = '{cardNumber}'))";
                     var command1 = new SqlCommand(queryTransaction1, database.getConnection());
                     var command2 = new SqlCommand(queryTransaction2, database.getConnection());

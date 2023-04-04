@@ -63,6 +63,7 @@ namespace Bank_app.Forms
                 {
                     MessageBox.Show("Введите корректный номер телефона.", caption, btn, ico);
                     numberChek = true;
+                    return;
                 }
             }
             else if (selectedOperator == "Мегафон")
@@ -73,6 +74,7 @@ namespace Bank_app.Forms
                     {
                         MessageBox.Show("Введите корректный номер телефона.", caption, btn, ico);
                         numberChek = true;
+                        return;
                     }
                 }
             }
@@ -82,6 +84,7 @@ namespace Bank_app.Forms
                 {
                     MessageBox.Show("Введите корректный номер телефона.", caption, btn, ico);
                     numberChek = true;
+                    return;
                 }
             }
 

@@ -216,7 +216,8 @@ namespace Bank_app.Forms
             // 
             this.GenderComboBox.FormattingEnabled = true;
             this.GenderComboBox.Items.AddRange(new object[] {
-            "1"});
+            "Муж",
+            "Жен"});
             this.GenderComboBox.Location = new System.Drawing.Point(18, 254);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(283, 21);

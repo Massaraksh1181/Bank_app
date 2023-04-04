@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bank_app.Classes;
+using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 
 namespace Bank_app.Forms
@@ -48,7 +49,18 @@ namespace Bank_app.Forms
             var currency = currencyComboBox.GetItemText(currencyComboBox.SelectedItem);
             var paymentSystem = paymentSystemComboBox.GetItemText(paymentSystemComboBox.SelectedItem);
             var cardNumber = "";
-            var cardPin = numericUpDownPin.Value;
+            //var cardPin = numericUpDownPin.Value;
+            var cardPin = 0;
+
+            if (!Regex.IsMatch(PINcodeTextBox.Text, "^[0-9]{4}$"))
+            {
+                MessageBox.Show("Введите корректный PIN-код!","Отмена", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            cardPin = Convert.ToInt32(PINcodeTextBox.Text);
+
+
             var cvvCode = "";
             bool isCardFree = false;
             DateTime dateTime = DateTime.Now;
